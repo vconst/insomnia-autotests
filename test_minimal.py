@@ -1,13 +1,15 @@
-# from unittest import TestCase
-# class TryTesting(TestCase):
-#     def test_always_passes(self):
-#         self.assertTrue(True)
-#     def test_always_fails(self):
-#         self.assertTrue(False)
+import os
+
+from check_internet import check_internet
 
 def test_always_passes():
     assert True
 
-def test_always_fails():
-    assert False
+def test_internet():
+    assert check_internet()
+
+def test_chrome_available():
+    assert 0==os.system("type chrome")
+
+
 
